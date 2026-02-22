@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@mui/material": "^7.3.8",
     "apollo-client": "^2.6.10",
     "apollo-upload-client": "17.0.0",
     "axios": "^1.13.5",
@@ -24,7 +25,6 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-i18next": "^16.5.4",
-    "yarn": "^1.22.22",
     "react-merge-refs": "^3.0.2",
     "react-moment": "^1.1.2",
     "react-scrollable-feed": "^2.0.3",
@@ -34,10 +34,11 @@
     "subscriptions-transport-ws": "^0.11.0",
     "sweetalert2": "^11.4.23",
     "swiper": "^12.0.3",
-    "three": "^0.182.0"
+    "three": "^0.182.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "@mui/icons-material": "^7.3.7",
+    "@mui/icons-material": "^7.3.8",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/numeral": "^2.0.5",
