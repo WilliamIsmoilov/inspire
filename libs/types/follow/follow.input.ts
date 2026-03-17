@@ -1,30 +1,13 @@
-import { Field, InputType, Int } from "@nestjs/graphql";
-import { IsNotEmpty, IsOptional } from "class-validator";
-import { ObjectId } from "mongoose";
 
+interface FollowSearch{
 
-@InputType()
-class FollowSearch{
-    @IsOptional()
-    @Field(() => String, {nullable: true})
-    followingId?: ObjectId
-
-    @IsOptional()
-    @Field(() => String, {nullable: true})
-    followerId?: ObjectId
+    followingId?: string
+    followerId?: string
 }
 
-@InputType()
-export class FollowInquery{
-    @IsNotEmpty()
-    @Field(() => Int)
+
+export interface FollowInquery{
     page: number;
-
-    @IsNotEmpty()
-    @Field(() => Int)
     limit: number;
-
-    @IsNotEmpty()
-    @Field(() => FollowSearch)
     search: FollowSearch
 }
