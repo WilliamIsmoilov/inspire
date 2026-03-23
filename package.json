@@ -50,7 +50,7 @@
     "three": "^0.182.0"
   },
   "devDependencies": {
-     "@mui/icons-material": "^7.3.7",
+    "@mui/icons-material": "^7.3.7",
     "@tailwindcss/postcss": "^4",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
