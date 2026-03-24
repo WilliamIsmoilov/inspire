@@ -7,7 +7,7 @@ interface FollowSearch{
 
 
 export interface FollowInquery{
-    page: number;
-    limit: number;
+    page?: number;
+    limit?: number;
     search: FollowSearch
 }

@@ -24,7 +24,11 @@ const Home: NextPage = () => {
   )
 }else{
   return(
-    <h1>Hello world PC</h1>
+    <Stack>
+      <Story />
+      <h1>Hello world PC</h1>
+    </Stack>
+    
   )
 }
 }
