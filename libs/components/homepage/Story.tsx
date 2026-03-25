@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import useDeviceDetect from "../../hooks/useDeviceDetect"
 import { useReactiveVar } from "@apollo/client";
 import { userVar } from "../../../apollo/store";
-import { Box, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Stack, Typography } from "@mui/material";
 import { REACT_APP_API_URL } from "../../config";
 import { useState } from "react";
 import { FollowInquery } from "../../types/follow/follow.input";
@@ -29,26 +29,32 @@ const {initialInput = defaultInput, redirectToMemberPageHandler, likeMemberHandl
         return <div>Story</div>
     }else{
         return(
-            <Stack width={'100%'}>
+            <Stack width={'100%'} className="story">
                 <Stack className="profile">
                     <Box component={'div'} className="profile-img">
-                        <img 
-                        src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
-                        alt="profile image"
-                        style={{width: "60px"}} />
-                         <Box><div>shu yerda plus boladi</div></Box>
-
+                        <Avatar 
+                          src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
+                          alt="profile image"
+                           style={{width: "64px", height: '64px', padding: '2px', border: '2px dashed #ccc'}}
+                        />
                     </Box>
+                    <div className="add-str">.add story</div>
                     <Stack  className="user-info">
-                        <Typography className="user-name">{user?.memberNick}</Typography>
+                        <Typography className="user-name">{user?.memberNick}Alex</Typography>
 
                     </Stack>
                 </Stack>
 
-                <Stack className="users-account">
-                    <Box component={'div'} className="users">
-
+                <Stack direction={'row'} spacing={2} className="users-account">
+                    <Box component={'div'} className="user-profile">
+                        <Box>
+                            <Avatar 
+                            src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
+                            style={{width: '64px', height: '64px'}}
+                            />
+                        </Box>
                     </Box>
+                    <span className="name">Alex</span>
 
                 </Stack>
 

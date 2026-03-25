@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   )
 }else{
   return(
-    <Stack>
+    <Stack className="home-page">
       <Story />
       <h1>Hello world PC</h1>
     </Stack>

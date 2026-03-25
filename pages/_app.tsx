@@ -6,6 +6,7 @@ import { ApolloProvider } from "@apollo/client";
 import { CssBaseline } from "@mui/material";
 import { appWithTranslation } from 'next-i18next';
 import { light } from "../scss/MaterialTheme";
+import '../scss/pc/main.scss'
 
 
 
