@@ -3,6 +3,9 @@ import { NextPage } from "next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import useDeviceDetect from "../libs/hooks/useDeviceDetect";
 import Story from "../libs/components/homepage/Story"
+import Header from "../libs/components/homepage/Header";
+import Footer from "../libs/components/Footer";
+
 
 
 // export const getStaticProps = async ({ locale }: any) => ({
@@ -25,8 +28,8 @@ const Home: NextPage = () => {
 }else{
   return(
     <Stack className="home-page">
+      <Header />
       <Story />
-      <h1>Hello world PC</h1>
     </Stack>
     
   )

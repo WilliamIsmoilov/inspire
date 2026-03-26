@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import useDeviceDetect from "../hooks/useDeviceDetect"
 import {
   BottomNavigation,
@@ -5,42 +6,54 @@ import {
   Paper,
   Fab,
   Box,
-  Typography
+  Typography,
+  Stack
 } from "@mui/material";
+import { useRouter } from "next/router";
+
 
 
 
 const Footer = () => {
     const device = useDeviceDetect()
+    const router = useRouter()
 
     if(device === 'mobile'){
         return('MOBILE HOME')
     } else{
         return(
-            <Paper
-               elevation={0}
-               sx={{
-                position: "fixed",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: 0,
-                zIndex: 1300,
-                backdropFilter: 'blur(20px)',
-                backgroundColor: "rgba(255,255,255,0.9)",
-                borderTop: "1px solid rgba(0,0,0,0.1)",
-                display: "flex",
-                justifyContent: "center"
-               }}
-            >
-                <Box component={'div'} className="footer-container">
-                    <Fab>
-                        
-                    </Fab>
+            
+            <Stack flexDirection={'row'} justifyContent={'space-between'} className="footer-container" >
+                <Stack className="nav-btn">
+                  <Icon icon="lucide:home" width="26" />
+                  <Typography className="nav-text">
+                    Home
+                  </Typography>
+                </Stack>
 
+                <Stack className="nav-btn">
+                    <Icon icon="fluent:image-copy-28-regular" width="26"  />
+                    <Typography className="nav-text">Post</Typography>
+                </Stack>
+
+                <Box className="add-btn">
+                <Icon icon="lucide:plus" width="32" height="32" className="add-icon" />
                 </Box>
 
-            </Paper>
+                <Stack className="nav-btn">
+                    <Icon icon="boxicons:community-filled" width="26"  />
+                    <Typography className="nav-text">Community</Typography>
+                </Stack>
+
+                <Stack className="nav-btn">
+                    <Icon icon="gg:profile" width="26"/>
+                    <Typography className="nav-text">Profile</Typography>
+                </Stack>
+           </Stack>
+            
+           
         )
     }
 }
+
+export default Footer

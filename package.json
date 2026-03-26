@@ -9,10 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
-   "@apollo/client": "3.5.10",
+    "@apollo/client": "3.5.10",
     "@apollo/react-components": "^4.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@iconify/react": "^6.0.2",
     "@mui/lab": "^7.0.1-beta.21",
     "@mui/material": "^7.3.7",
     "@react-three/drei": "^10.7.7",

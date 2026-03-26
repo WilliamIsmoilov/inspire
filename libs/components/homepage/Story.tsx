@@ -35,12 +35,12 @@ const {initialInput = defaultInput, redirectToMemberPageHandler, likeMemberHandl
                         <Avatar 
                           src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
                           alt="profile image"
-                           style={{width: "64px", height: '64px', padding: '2px', border: '2px dashed #ccc'}}
+                           style={{width: "54px", height: '54px', padding: '2px', border: '2px dashed #ccc'}}
                         />
                     </Box>
                     <div className="add-str">.add story</div>
                     <Stack  className="user-info">
-                        <Typography className="user-name">{user?.memberNick}Alex</Typography>
+                        <Typography className="user-name">{user?.memberNick}</Typography>
 
                     </Stack>
                 </Stack>
@@ -50,7 +50,7 @@ const {initialInput = defaultInput, redirectToMemberPageHandler, likeMemberHandl
                         <Box>
                             <Avatar 
                             src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
-                            style={{width: '64px', height: '64px'}}
+                            style={{width: '54px', height: '54px'}}
                             />
                         </Box>
                     </Box>

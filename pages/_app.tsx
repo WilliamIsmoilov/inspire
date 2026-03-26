@@ -7,6 +7,7 @@ import { CssBaseline } from "@mui/material";
 import { appWithTranslation } from 'next-i18next';
 import { light } from "../scss/MaterialTheme";
 import '../scss/pc/main.scss'
+import LayoutFooter from "../libs/components/layout/LayoutFooter";
 
 
 
@@ -19,7 +20,9 @@ const App = ({Component, pageProps}: AppProps) => {
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
+        <LayoutFooter>
         <Component {...pageProps} />
+        </LayoutFooter>
       </ThemeProvider>
     </ApolloProvider>
   )
