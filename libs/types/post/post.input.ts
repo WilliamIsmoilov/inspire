@@ -26,8 +26,8 @@ export interface PISearch{
 
 
 export interface PostInquery{
-    page: number;
-    limit: number;
+    page?: number;
+    limit?: number;
     sort?: string;
     direction?: Direction;
     search: PISearch 

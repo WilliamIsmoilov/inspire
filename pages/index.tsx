@@ -5,6 +5,7 @@ import useDeviceDetect from "../libs/hooks/useDeviceDetect";
 import Story from "../libs/components/homepage/Story"
 import Header from "../libs/components/homepage/Header";
 import Footer from "../libs/components/Footer";
+import AllPost from "../libs/components/homepage/AllPost";
 
 
 
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
     <Stack className="home-page">
       <Header />
       <Story />
+      <AllPost />
     </Stack>
     
   )

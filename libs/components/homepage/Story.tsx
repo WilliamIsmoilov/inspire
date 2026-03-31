@@ -3,7 +3,7 @@ import useDeviceDetect from "../../hooks/useDeviceDetect"
 import { useReactiveVar } from "@apollo/client";
 import { userVar } from "../../../apollo/store";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
-import { REACT_APP_API_URL } from "../../config";
+import { NEXT_PUBLIC_API_URL } from "../../config";
 import { useState } from "react";
 import { FollowInquery } from "../../types/follow/follow.input";
 
@@ -33,7 +33,7 @@ const {initialInput = defaultInput, redirectToMemberPageHandler, likeMemberHandl
                 <Stack className="profile">
                     <Box component={'div'} className="profile-img">
                         <Avatar 
-                          src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
+                          src={user?.memberImage ? `${NEXT_PUBLIC_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
                           alt="profile image"
                            style={{width: "54px", height: '54px', padding: '2px', border: '2px dashed #ccc'}}
                         />
@@ -49,7 +49,7 @@ const {initialInput = defaultInput, redirectToMemberPageHandler, likeMemberHandl
                     <Box component={'div'} className="user-profile">
                         <Box>
                             <Avatar 
-                            src={user?.memberImage ? `${REACT_APP_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
+                            src={user?.memberImage ? `${NEXT_PUBLIC_API_URL}/${user?.memberImage}` : 'img/profile/defaultUser.svg'}
                             style={{width: '54px', height: '54px'}}
                             />
                         </Box>
