@@ -14,12 +14,10 @@ import {  GET_POSTS } from "../../../apollo/user/query"
 import { T } from "../../types/common"
 
 const defaultInput = {
-    page: 1,
-    limit: 9,
     sort: 'createdAt',
     direction: 'DESC',
     search:{
-
+        
     }
 }
 
@@ -48,14 +46,13 @@ const AllPost = ({initialInput = defaultInput, ...props}: any) => {
         error: getPostsError,
         refetch: getPostsRefetch
     } = useQuery(GET_POSTS, {
-        fetchPolicy: 'cache-and-network',
-        variables: {input: initialInput},
+        fetchPolicy: 'network-only',
+        variables: {input: searchFilter},
         notifyOnNetworkStatusChange: true,
         onCompleted: (data: T) => {
             setPosts(data?.getPosts.list)
         }
     })
-
 
     /** LIFE CYCLE */
     useEffect(() => {
@@ -63,9 +60,8 @@ const AllPost = ({initialInput = defaultInput, ...props}: any) => {
             const inputObj = JSON.parse(router?.query?.input as string)
             setSearchFilter(inputObj)
         }
-
-        setCurrentPage(searchFilter.page === undefined ? 1 : searchFilter.page)
     }, [router])
+
 
     useEffect(() => {
         console.log('searchFilter:', searchFilter)
@@ -96,7 +92,7 @@ const AllPost = ({initialInput = defaultInput, ...props}: any) => {
     const sortingHandler = (e: React.MouseEvent<HTMLElement>) => {
         switch (e.currentTarget.id){
             case 'new':
-                setSearchFilter({...searchFilter, sort: 'createdAt', direction: Direction.ASC})
+                setSearchFilter({...searchFilter, sort: 'createdAt', direction: Direction.DESC})
                 setFilterSortName('New')
                 break
 

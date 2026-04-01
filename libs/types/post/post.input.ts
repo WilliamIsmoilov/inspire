@@ -21,6 +21,7 @@ export interface PISearch{
     postType?: PostType
     likedMost?: LikedMost
     postTitle?: string
+    postViews?: string
 
 }
 
