@@ -36,12 +36,12 @@ const AllPostCard = (props: AllPostCard) => {
             <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"} className="post-header">
                 <Stack direction={'row'} spacing={1.5} alignItems={"center"}>
                     <Avatar 
-                       src={user?.memberImage ? `${NEXT_PUBLIC_API_URL}/${user?.memberImage}` : '/img/profile/defaultUser.svg'}
-                       sx={{width:'20%', height:'20%'}}
+                       src={post?.memberData?.memberImage ? `${NEXT_PUBLIC_API_URL}/${post?.memberData?.memberImage}` : '/img/profile/defaultUser.svg'}
+                       sx={{ borderRadius: '50%'}}
                     />
 
                     <Box>
-                        <Typography className="username">{user?.memberNick}</Typography>
+                        <Typography className="username">{post?.memberData?.memberNick}</Typography>
                         <Typography className="post-time">
                             
                         </Typography>
